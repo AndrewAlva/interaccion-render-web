@@ -11,13 +11,13 @@ var height = window.innerHeight;
 ////////////////////
 // 2. 3D Scene setup.
 // Renderer.
-const renderer = new THREE.WebGLRenderer({ canvas: canvas, });
+const renderer = new THREE.WebGLRenderer({ canvas: canvas });
 renderer.setSize(width, height);
 
 // Scene.
 const scene = new THREE.Scene();
 
-// Camera.
+// Camera. (And its position).
 const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
 camera.position.z = 2;
 
@@ -25,6 +25,7 @@ camera.position.z = 2;
 const mesh = new THREE.Mesh(
     new THREE.SphereGeometry(),
     new THREE.MeshBasicMaterial({ color: "#ff6600", wireframe: true })
+    // new THREE.MeshNormalMaterial({ wireframe: true })
 );
 
 
