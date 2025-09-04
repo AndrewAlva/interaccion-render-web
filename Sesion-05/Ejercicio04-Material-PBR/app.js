@@ -31,6 +31,26 @@ geometry.setAttribute('uv2', new THREE.BufferAttribute(geometry.attributes.uv.ar
 var material;
 var mesh;
 
+function createMesh() {
+    material = new THREE.MeshStandardMaterial({
+        map: tex.albedo,
+        aoMap: tex.ao,
+        metalnessMap: tex.metalness,
+        normalMap: tex.normal,
+        roughnessMap: tex.roughness,
+        displacementMap: tex.displacement,
+        displacementScale: 0.1,
+        side: THREE.DoubleSide,
+        // wireframe: true,
+    });
+    
+
+    mesh = new THREE.Mesh(geometry, material);
+    scene.add(mesh);
+
+    animate();
+}
+
 // 1. Crear LoadingManager
 const manager = new THREE.LoadingManager();
 
@@ -63,27 +83,6 @@ const tex = {
     roughness: loader.load('./texturas/bricks/roughness.png'),
     displacement: loader.load('./texturas/bricks/displacement.png'),
 };
-
-function createMesh() {
-    material = new THREE.MeshStandardMaterial({
-        map: tex.albedo,
-        aoMap: tex.ao,
-        metalnessMap: tex.metalness,
-        normalMap: tex.normal,
-        roughnessMap: tex.roughness,
-        displacementMap: tex.displacement,
-        displacementScale: 0.1,
-        side: THREE.DoubleSide,
-        // wireframe: true,
-    });
-    console.log('material.side', material.side);
-    
-
-    mesh = new THREE.Mesh(geometry, material);
-    scene.add(mesh);
-
-    animate();
-}
 
 
 ////////////////////////////////////////
