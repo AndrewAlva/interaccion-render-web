@@ -1,4 +1,4 @@
-console.log("S04. Ejercicio 01: Geometries.");
+console.log("S05. Ejercicio 01: Geometries.");
 console.log(THREE);
 
 ////////////////////

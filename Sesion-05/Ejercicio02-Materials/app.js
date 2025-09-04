@@ -1,4 +1,4 @@
-console.log("S04. Ejercicio 02: Materials.");
+console.log("S05. Ejercicio 02: Materials.");
 console.log(THREE);
 
 ////////////////////
