@@ -1,0 +1,120 @@
+@font-face {
+  font-family: "Formula";
+  src:
+    local("Formula"),
+    url("./assets/fonts/PPFormula-CondensedBlack.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Editorial";
+  src:
+    local("Editorial"),
+    url("./assets/fonts/PPEditorialOld-UltralightItalic.otf") format("opentype");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Formula", sans-serif;
+    color: aqua;
+}
+
+ul, li {
+    list-style: none;
+}
+
+button {
+    appearance: none;
+    border: none;
+    outline: none;
+}
+
+#lienzo {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2020cc;
+}
+
+header {
+    position: absolute;
+    top: 0; left: 0;
+    padding: 2vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    position: relative;
+    text-align: right;
+    font-family: "Editorial";
+    font-size: 4vh;
+}
+
+footer {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%;
+    mix-blend-mode: luminosity;
+}
+
+.subtitle {
+    position: relative;
+    padding: 2vh 0 0 2vh;
+    font-family: "Formula";
+    text-transform: uppercase;
+    font-size: 14vh;
+}
+
+#centroLogo {
+    position: absolute;
+    bottom: 5vh;
+    right: 2.2vh;
+    width: 10vh;
+}
+
+#materials {
+    position: fixed;
+    margin: auto;
+    top: 0;
+    right: 0;
+    padding-right: 2vh;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#materials ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+#materials ul li {
+    display: flex;
+}
+
+.materialSwitch {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background-color: blue;
+    background-size: cover;
+    outline: 1px solid white;
+    cursor: pointer;
+    transition: all 0.13s ease-out;
+}
+
+.materialSwitch:hover {
+    outline: 4px solid white;
+}
+
+#bricksMaterial {
+    background-image: url('./assets/texturas/bricks/albedo.png');
+}
+#metalMaterial {
+    background-image: url('./assets/texturas/rusted/albedo.png');
+}
