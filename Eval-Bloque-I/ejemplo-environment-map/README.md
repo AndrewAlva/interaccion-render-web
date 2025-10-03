@@ -10,3 +10,6 @@ Asignamos este "mapa" (también conocido como "environment map") al fondo de la 
 
 ## 4. Conectar Environment Map con nuestro material.
 Asignar nuestro "environment map" a un atributo en el material para que las partes metálicas lo reflejen.
+
+# Recursos.
+[Cube Textures para crear Environment Maps.](https://www.humus.name/index.php?page=Textures)
